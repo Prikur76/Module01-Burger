@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     padding-top: 26px;
     padding-bottom: 25px;
+    border-bottom: 1px solid #dedede;
 }
 .header-logo {
     display: block;
@@ -28,7 +29,7 @@ body {
     list-style-type: none;
     display: flex;
     padding-left: 0;
-    gap: 46px;
+    gap: 80px;
 }
 .header-nav a {
     font-weight: 600;
@@ -36,6 +37,11 @@ body {
     color: #443737;
     text-decoration: none;
 }
+
+.header-nav a:hover {
+    color:#FFC725;
+}
+
 .header-nav a::after {
     content: '';
     width: 100%;
@@ -44,9 +50,11 @@ body {
     background-color:transparent;
     display:block;
 }
+
 .header-nav a.active::after {
     background-color: #FFC725;
 }
+
 .button {
     display: flex;
     align-items: center;
@@ -54,11 +62,11 @@ body {
     border: none;
     padding: 0;
     gap: 10px;
+    cursor: pointer;
 }
 
 .button-item {
     position:relative;
-
 }
 
 .button-count {
@@ -86,7 +94,7 @@ body {
     background-image: url(../images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 142px 0;
+    padding: 139px 0;    
     background-position: center center;
 }
 .breadcrumbs {
@@ -95,7 +103,7 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 7px;
 }
 
 .breadcrumbs a {
@@ -104,11 +112,19 @@ body {
     font-size: 15px;
     text-decoration: none;
 }
+.breadcrumbs a:hover {
+    color:#FFC725;
+}
 
 .breadcrumbs a::before {
     content: "/";
     position: relative;
-    left: -7px;
+    left: -2px;
+    pointer-events: none;
+}
+
+.breadcrumbs a:hover::before {
+    color: #dedede;
 }
 
 .breadcrumbs li:first-child a::before {
@@ -118,15 +134,77 @@ body {
 .title {
     font-weight: 700;
     font-size: 79px;
-    margin-top: 10px;
-    margin-bottom: 10px;    
+    margin-top: 19px;
+    margin-bottom: 14px;    
 }
 .description {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.9;
     color: #FAF9F9;
     text-align: center;
     max-width: 320px;
-    margin: 0 auto;
+    margin: 0px auto;
+}
+
+.banner-box {
+    background-image: url(../images/main_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 139px;
+    padding: 103px 773px 100px 100px;
+    color: #FAF9F9;    
+}
+
+.banner-title {    
+    font-family: Nunito Sans;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 82px;
+    text-transform: uppercase;
+    margin-top: -3px;
+}
+
+.banner-title>span {
+    width: 95px;
+    height: 28px;
+    border-radius: 14px;
+    background: #F37335;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: uppercase;   
+}
+
+.banner-text {
+    color: #FAF9F9;
+    font-family: Open Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: -43px;
+}
+
+.banner-link {
+    text-decoration: none;    
+    background-color: #FBB731;
+    border-radius: 5px;
+    text-align: center;    
+    color: #1E2F40;    
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 59px; 
+    text-transform: uppercase;
+    padding: 20px 25px;
 }
